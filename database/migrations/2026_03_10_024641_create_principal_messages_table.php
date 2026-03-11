@@ -18,9 +18,6 @@ return new class extends Migration
             $table->longText('message');
             $table->integer('total_students')->nullable();
             $table->integer('total_staff')->nullable();
-            $table->string('slug')->unique();
-            $table->date('news_date');
-            $table->longText('content');
             $table->timestamps();
         });
     }
