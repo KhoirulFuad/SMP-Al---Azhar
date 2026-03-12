@@ -141,109 +141,128 @@ font-family:Poppins;
 <!-- AGENDA SEKOLAH -->
 <section class="text-center py-16 text-white">
 
-<h2 class="text-3xl font-bold">
-Agenda Sekolah
-</h2>
+  <h2 class="text-3xl font-bold mb-10">Agenda Sekolah</h2>
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-10 px-4">
+  <!-- Carousel Wrapper -->
+  <div class="relative max-w-6xl mx-auto px-12">
 
+    <!-- Tombol Kiri -->
+    <button onclick="slideAgenda(-1)" 
+    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-green-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-green-100 transition text-3xl font-bold">
+      &#8249;
+    </button>
 
-<!-- CARD -->
-<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
+    <!-- Tombol Kanan -->
+    <button onclick="slideAgenda(1)" 
+    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-green-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-green-100 transition text-3xl font-bold">
+      &#8250;
+    </button>
 
-<img src="{{ asset('images/agenda1.jpg') }}" 
-class="w-full h-52 object-cover">
+    <!-- Viewport -->
+    <div class="overflow-hidden">
+      <div id="agendaTrack" class="flex transition-transform duration-500 ease-in-out" style="gap: 24px;">
 
-<div class="p-5">
+        <!-- CARD 1 -->
+        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
+          <img src="{{ asset('images/agenda1.jpg') }}" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-2">20 Juni 2026</p>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Kegiatan Pesantren Kilat</h3>
+            <p class="text-gray-700 text-sm">SMP Islam Al-Azhar 17 Pontianak mengadakan kegiatan pesantren kilat untuk meningkatkan pemahaman agama dan kebersamaan siswa.</p>
+            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
+          </div>
+        </div>
 
-<p class="text-sm text-gray-600 mb-2">
-20 Juni 2026
-</p>
+        <!-- CARD 2 -->
+        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
+          <img src="{{ asset('images/agenda2.jpg') }}" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-2">18 Juni 2026</p>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Lomba Kebersihan Kelas</h3>
+            <p class="text-gray-700 text-sm">Sekolah mengadakan lomba kebersihan kelas yang diikuti seluruh siswa sebagai bentuk pembiasaan menjaga lingkungan.</p>
+            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
+          </div>
+        </div>
 
-<h3 class="text-xl font-bold mb-2">
-Kegiatan Pesantren Kilat
-</h3>
+        <!-- CARD 3 -->
+        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
+          <img src="{{ asset('images/agenda3.jpg') }}" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-2">15 Juni 2026</p>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Kegiatan Bakti Sosial</h3>
+            <p class="text-gray-700 text-sm">Kegiatan bakti sosial dilakukan oleh siswa dan guru untuk membantu masyarakat sekitar serta menanamkan nilai kepedulian.</p>
+            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
+          </div>
+        </div>
 
-<p class="text-gray-700 text-sm">
-SMP Islam Al-Azhar 17 Pontianak mengadakan kegiatan pesantren kilat
-untuk meningkatkan pemahaman agama dan kebersamaan siswa.
-</p>
+        <!-- CARD 4 -->
+        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
+          <img src="{{ asset('images/agenda4.jpg') }}" class="w-full h-52 object-cover">
+          <div class="p-5">
+            <p class="text-sm text-gray-600 mb-2">10 Juni 2026</p>
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Class Meeting</h3>
+            <p class="text-gray-700 text-sm">Kegiatan class meeting diadakan setelah ujian sebagai sarana pengembangan bakat dan mempererat hubungan antar siswa.</p>
+            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
+          </div>
+        </div>
 
-<a href="#" 
-class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
-Selengkapnya >
-</a>
+      </div>
+    </div>
 
-</div>
+    <!-- Dots -->
+    <div class="flex justify-center gap-2 mt-6" id="agendaDots"></div>
 
-</div>
-
-
-<!-- CARD -->
-<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
-
-<img src="{{ asset('images/agenda2.jpg') }}" 
-class="w-full h-52 object-cover">
-
-<div class="p-5">
-
-<p class="text-sm text-gray-600 mb-2">
-18 Juni 2026
-</p>
-
-<h3 class="text-xl font-bold mb-2">
-Lomba Kebersihan Kelas
-</h3>
-
-<p class="text-gray-700 text-sm">
-Sekolah mengadakan lomba kebersihan kelas yang diikuti seluruh siswa
-sebagai bentuk pembiasaan menjaga lingkungan.
-</p>
-
-<a href="#" 
-class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
-Selengkapnya >
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD -->
-<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
-
-<img src="{{ asset('images/agenda3.jpg') }}" 
-class="w-full h-52 object-cover">
-
-<div class="p-5">
-
-<p class="text-sm text-gray-600 mb-2">
-15 Juni 2026
-</p>
-
-<h3 class="text-xl font-bold mb-2">
-Kegiatan Bakti Sosial
-</h3>
-
-<p class="text-gray-700 text-sm">
-Kegiatan bakti sosial dilakukan oleh siswa dan guru untuk
-membantu masyarakat sekitar serta menanamkan nilai kepedulian.
-</p>
-
-<a href="#" 
-class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
-Selengkapnya >
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
+
+<script>
+  const track = document.getElementById('agendaTrack');
+  const gap = 24;
+  let current = 0;
+  let autoSlideInterval;
+
+  const totalCards = track.children.length;
+  const visibleCount = 3;
+  const totalSlides = totalCards - visibleCount + 1;
+
+  // Buat dots
+  const dotsContainer = document.getElementById('agendaDots');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (i === 0 ? 'bg-white' : 'bg-white/40');
+    dot.onclick = () => { goToSlide(i); resetAutoSlide(); };
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateDots() {
+    Array.from(dotsContainer.children).forEach((dot, i) => {
+      dot.className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (i === current ? 'bg-white' : 'bg-white/40');
+    });
+  }
+
+  function goToSlide(index) {
+    current = index;
+    const cardWidth = track.children[0].offsetWidth + gap;
+    track.style.transform = `translateX(-${current * cardWidth}px)`;
+    updateDots();
+  }
+
+  function slideAgenda(dir) {
+    current += dir;
+    if (current < 0) current = totalSlides - 1;
+    if (current >= totalSlides) current = 0;
+    goToSlide(current);
+    resetAutoSlide();
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => slideAgenda(1), 4000);
+  }
+
+  resetAutoSlide();
+</script>
 
 
 <!-- PRESTASI -->
