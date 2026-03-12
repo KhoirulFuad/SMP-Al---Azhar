@@ -169,48 +169,74 @@ Jadwal Agenda
 
 
 <!-- PRESTASI -->
-<section class="py-16 bg-green-700">
+<section class="py-20 bg-white overflow-hidden">
 
-<div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4 flex gap-8 items-center">
 
-<h2 class="text-3xl font-bold mb-8 text-white">
-Prestasi Kami
-</h2>
+    <!-- Kiri: Konten Prestasi -->
+    <div class="flex-1">
 
-<div class="grid md:grid-cols-2 gap-6">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800">
+        Prestasi Kami
+      </h2>
 
-<div class="bg-white rounded-lg p-4 flex gap-4">
+      <!-- Card Prestasi 1 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 items-center mb-4 border border-gray-100">
+        <img src="{{ asset('images/prestasi1.jpg') }}" 
+        class="w-[140px] h-[100px] rounded-lg object-cover flex-shrink-0">
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. 
+          It has roots in a piece of classical Latin literature from 45 BC, 
+          making it over 2000 years old.
+        </p>
+      </div>
 
-<img src="{{ asset('prestasi1.jpg') }}" 
-class="w-[120px] rounded-lg">
+      <!-- Card Prestasi 2 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 items-center mb-8 border border-gray-100">
+        <img src="{{ asset('images/prestasi2.jpg') }}" 
+        class="w-[140px] h-[100px] rounded-lg object-cover flex-shrink-0">
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. 
+          It has roots in a piece of classical Latin literature from 45 BC, 
+          making it over 2000 years old.
+        </p>
+      </div>
 
-<div>
-<h4 class="font-bold">
-Juara 1 Lomba
-</h4>
-<p>Prestasi siswa dalam lomba tingkat kota.</p>
-</div>
+      <!-- Tombol -->
+      <div class="flex justify-center">
+        <a href="#" class="border-2 border-green-600 text-green-700 font-semibold px-8 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors flex items-center gap-2">
+          Lihat Selengkapnya 
+          <span>&rsaquo;</span>
+        </a>
+      </div>
 
-</div>
+    </div>
 
+    <div class="relative w-[380px] h-[420px] flex-shrink-0 hidden md:flex items-center justify-center">
 
-<div class="bg-white rounded-lg p-4 flex gap-4">
+        <!-- Lingkaran hijau besar -->
+        <div class="absolute -bottom-8 -right-12 w-64 h-64 bg-green-500 rounded-full z-0 flex items-center justify-center">
 
-<img src="{{ asset('prestasi2.jpg') }}" 
-class="w-[120px] rounded-lg">
+            <!-- Circle kuning di tengah hijau -->
+            <div class="w-56 h-56 bg-yellow-400 rounded-full"></div>
 
-<div>
-<h4 class="font-bold">
-Juara 2 Lomba
-</h4>
-<p>Prestasi siswa dalam lomba tingkat provinsi.</p>
-</div>
+        </div>
 
-</div>
+        <!-- Gambar maskot -->
+        <img src="{{ asset('images/backgroundsiswa.png') }}" 
+        class="absolute z-10 h-[400px] w-auto object-contain">
 
-</div>
+        <!-- Lingkaran kuning depan -->
+        <div class="absolute -bottom-20 right-14 w-48 h-48 bg-green-600 rounded-full z-20 flex items-center justify-center">
 
-</div>
+            <!-- Circle kecil di tengah -->
+            <div class="w-40 h-40 bg-yellow-400 rounded-full"></div>
+
+        </div>
+
+    </div>
+
+  </div>
 
 </section>
 
