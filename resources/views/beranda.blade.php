@@ -138,30 +138,108 @@ font-family:Poppins;
 </section>
 
 
-<!-- AGENDA -->
+<!-- AGENDA SEKOLAH -->
 <section class="text-center py-16 text-white">
 
 <h2 class="text-3xl font-bold">
 Agenda Sekolah
 </h2>
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 mt-8 px-4">
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-10 px-4">
 
-<div class="bg-white text-black rounded-lg p-5">
-Jadwal Agenda
+
+<!-- CARD -->
+<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
+
+<img src="{{ asset('images/agenda1.jpg') }}" 
+class="w-full h-52 object-cover">
+
+<div class="p-5">
+
+<p class="text-sm text-gray-600 mb-2">
+20 Juni 2026
+</p>
+
+<h3 class="text-xl font-bold mb-2">
+Kegiatan Pesantren Kilat
+</h3>
+
+<p class="text-gray-700 text-sm">
+SMP Islam Al-Azhar 17 Pontianak mengadakan kegiatan pesantren kilat
+untuk meningkatkan pemahaman agama dan kebersamaan siswa.
+</p>
+
+<a href="#" 
+class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
+Selengkapnya >
+</a>
+
 </div>
 
-<div class="bg-white text-black rounded-lg p-5">
-Jadwal Agenda
 </div>
 
-<div class="bg-white text-black rounded-lg p-5">
-Jadwal Agenda
+
+<!-- CARD -->
+<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
+
+<img src="{{ asset('images/agenda2.jpg') }}" 
+class="w-full h-52 object-cover">
+
+<div class="p-5">
+
+<p class="text-sm text-gray-600 mb-2">
+18 Juni 2026
+</p>
+
+<h3 class="text-xl font-bold mb-2">
+Lomba Kebersihan Kelas
+</h3>
+
+<p class="text-gray-700 text-sm">
+Sekolah mengadakan lomba kebersihan kelas yang diikuti seluruh siswa
+sebagai bentuk pembiasaan menjaga lingkungan.
+</p>
+
+<a href="#" 
+class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
+Selengkapnya >
+</a>
+
 </div>
 
-<div class="bg-white text-black rounded-lg p-5">
-Jadwal Agenda
 </div>
+
+
+<!-- CARD -->
+<div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left">
+
+<img src="{{ asset('images/agenda3.jpg') }}" 
+class="w-full h-52 object-cover">
+
+<div class="p-5">
+
+<p class="text-sm text-gray-600 mb-2">
+15 Juni 2026
+</p>
+
+<h3 class="text-xl font-bold mb-2">
+Kegiatan Bakti Sosial
+</h3>
+
+<p class="text-gray-700 text-sm">
+Kegiatan bakti sosial dilakukan oleh siswa dan guru untuk
+membantu masyarakat sekitar serta menanamkan nilai kepedulian.
+</p>
+
+<a href="#" 
+class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">
+Selengkapnya >
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -392,7 +470,7 @@ class="rounded-lg">
 <div class="max-w-6xl mx-auto flex justify-between px-4">
 
 <div>
-<img src="{{ asset('logo.png') }}" class="w-10">
+<img src="{{ asset('images/logo.jpg') }}" class="w-10">
 <p>SMP Islam Al-Azhar 17 Pontianak</p>
 </div>
 
