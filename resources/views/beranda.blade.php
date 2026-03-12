@@ -194,7 +194,6 @@ overflow:hidden;
 
 <section class="text-center py-16 text-white">
 
-<<<<<<< HEAD
 <h2 class="text-3xl font-bold mb-10">
 Agenda Sekolah
 </h2>
@@ -204,20 +203,8 @@ Agenda Sekolah
 <div class="swiper agendaSwiper relative">
 
 <div class="swiper-wrapper">
-=======
-  <h2 class="text-3xl font-bold mb-10">Agenda Sekolah</h2>
 
-  <!-- Carousel Wrapper -->
-  <div class="relative max-w-6xl mx-auto px-12">
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
 
-    <!-- Tombol Kiri -->
-    <button onclick="slideAgenda(-1)" 
-    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-green-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-green-100 transition text-3xl font-bold">
-      &#8249;
-    </button>
-
-<<<<<<< HEAD
 <!-- CARD 1 -->
 
 <div class="swiper-slide flex">
@@ -243,69 +230,9 @@ dan kebersamaan siswa.
 <a href="#" class="mt-4 bg-green-600 text-white px-5 py-2 rounded-full w-fit">
 Selengkapnya >
 </a>
-=======
-    <!-- Tombol Kanan -->
-    <button onclick="slideAgenda(1)" 
-    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-green-700 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-green-100 transition text-3xl font-bold">
-      &#8250;
-    </button>
 
-    <!-- Viewport -->
-    <div class="overflow-hidden">
-      <div id="agendaTrack" class="flex transition-transform duration-500 ease-in-out" style="gap: 24px;">
+</div>
 
-        <!-- CARD 1 -->
-        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
-          <img src="{{ asset('images/agenda1.jpg') }}" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <p class="text-sm text-gray-600 mb-2">20 Juni 2026</p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Kegiatan Pesantren Kilat</h3>
-            <p class="text-gray-700 text-sm">SMP Islam Al-Azhar 17 Pontianak mengadakan kegiatan pesantren kilat untuk meningkatkan pemahaman agama dan kebersamaan siswa.</p>
-            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
-          <img src="{{ asset('images/agenda2.jpg') }}" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <p class="text-sm text-gray-600 mb-2">18 Juni 2026</p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Lomba Kebersihan Kelas</h3>
-            <p class="text-gray-700 text-sm">Sekolah mengadakan lomba kebersihan kelas yang diikuti seluruh siswa sebagai bentuk pembiasaan menjaga lingkungan.</p>
-            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
-          <img src="{{ asset('images/agenda3.jpg') }}" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <p class="text-sm text-gray-600 mb-2">15 Juni 2026</p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Kegiatan Bakti Sosial</h3>
-            <p class="text-gray-700 text-sm">Kegiatan bakti sosial dilakukan oleh siswa dan guru untuk membantu masyarakat sekitar serta menanamkan nilai kepedulian.</p>
-            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
-          <img src="{{ asset('images/agenda4.jpg') }}" class="w-full h-52 object-cover">
-          <div class="p-5">
-            <p class="text-sm text-gray-600 mb-2">10 Juni 2026</p>
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Class Meeting</h3>
-            <p class="text-gray-700 text-sm">Kegiatan class meeting diadakan setelah ujian sebagai sarana pengembangan bakat dan mempererat hubungan antar siswa.</p>
-            <a href="#" class="inline-block mt-4 bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700">Selengkapnya ></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
-
-    <!-- Dots -->
-    <div class="flex justify-center gap-2 mt-6" id="agendaDots"></div>
-
-<<<<<<< HEAD
 </div>
 
 </div>
@@ -492,154 +419,49 @@ Selengkapnya >
 </div>
 
 </div>
-=======
-  </div>
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
 
 </section>
-
-<script>
-  const track = document.getElementById('agendaTrack');
-  const gap = 24;
-  let current = 0;
-  let autoSlideInterval;
-
-  const totalCards = track.children.length;
-  const visibleCount = 3;
-  const totalSlides = totalCards - visibleCount + 1;
-
-  // Buat dots
-  const dotsContainer = document.getElementById('agendaDots');
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('button');
-    dot.className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (i === 0 ? 'bg-white' : 'bg-white/40');
-    dot.onclick = () => { goToSlide(i); resetAutoSlide(); };
-    dotsContainer.appendChild(dot);
-  }
-
-  function updateDots() {
-    Array.from(dotsContainer.children).forEach((dot, i) => {
-      dot.className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (i === current ? 'bg-white' : 'bg-white/40');
-    });
-  }
-
-  function goToSlide(index) {
-    current = index;
-    const cardWidth = track.children[0].offsetWidth + gap;
-    track.style.transform = `translateX(-${current * cardWidth}px)`;
-    updateDots();
-  }
-
-  function slideAgenda(dir) {
-    current += dir;
-    if (current < 0) current = totalSlides - 1;
-    if (current >= totalSlides) current = 0;
-    goToSlide(current);
-    resetAutoSlide();
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(() => slideAgenda(1), 4000);
-  }
-
-  resetAutoSlide();
-</script>
 
 
 
 <!-- PRESTASI -->
-<<<<<<< HEAD
 
 <section class="py-16 bg-green-700">
-=======
-<section class="py-20 bg-white overflow-hidden">
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
 
-  <div class="max-w-6xl mx-auto px-4 flex gap-8 items-center">
+<div class="max-w-6xl mx-auto px-4">
 
-    <!-- Kiri: Konten Prestasi -->
-    <div class="flex-1">
+<h2 class="text-3xl font-bold mb-8 text-white">
+Prestasi Kami
+</h2>
 
-      <h2 class="text-3xl font-bold mb-8 text-gray-800">
-        Prestasi Kami
-      </h2>
+<div class="grid md:grid-cols-2 gap-6">
 
-      <!-- Card Prestasi 1 -->
-      <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 items-center mb-4 border border-gray-100">
-        <img src="{{ asset('images/prestasi1.jpg') }}" 
-        class="w-[140px] h-[100px] rounded-lg object-cover flex-shrink-0">
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. 
-          It has roots in a piece of classical Latin literature from 45 BC, 
-          making it over 2000 years old.
-        </p>
-      </div>
+<div class="bg-white rounded-lg p-4 flex gap-4">
 
-<<<<<<< HEAD
 <img src="{{ asset('prestasi1.jpg') }}" class="w-[120px] rounded-lg">
 
 <div>
 <h4 class="font-bold">Juara 1 Lomba</h4>
 <p>Prestasi siswa dalam lomba tingkat kota.</p>
 </div>
-=======
-      <!-- Card Prestasi 2 -->
-      <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 items-center mb-8 border border-gray-100">
-        <img src="{{ asset('images/prestasi2.jpg') }}" 
-        class="w-[140px] h-[100px] rounded-lg object-cover flex-shrink-0">
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. 
-          It has roots in a piece of classical Latin literature from 45 BC, 
-          making it over 2000 years old.
-        </p>
-      </div>
 
-      <!-- Tombol -->
-      <div class="flex justify-center">
-        <a href="#" class="border-2 border-green-600 text-green-700 font-semibold px-8 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors flex items-center gap-2">
-          Lihat Selengkapnya 
-          <span>&rsaquo;</span>
-        </a>
-      </div>
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
+</div>
 
-    </div>
 
-    <div class="relative w-[380px] h-[420px] flex-shrink-0 hidden md:flex items-center justify-center">
+<div class="bg-white rounded-lg p-4 flex gap-4">
 
-        <!-- Lingkaran hijau besar -->
-        <div class="absolute -bottom-8 -right-12 w-64 h-64 bg-green-500 rounded-full z-0 flex items-center justify-center">
-
-<<<<<<< HEAD
 <img src="{{ asset('prestasi2.jpg') }}" class="w-[120px] rounded-lg">
 
 <div>
 <h4 class="font-bold">Juara 2 Lomba</h4>
 <p>Prestasi siswa dalam lomba tingkat provinsi.</p>
 </div>
-=======
-            <!-- Circle kuning di tengah hijau -->
-            <div class="w-56 h-56 bg-yellow-400 rounded-full"></div>
 
-        </div>
->>>>>>> 554ae3ff9f87d20fb063bd12eaf24d1a3229ef91
+</div>
 
-        <!-- Gambar maskot -->
-        <img src="{{ asset('images/backgroundsiswa.png') }}" 
-        class="absolute z-10 h-[400px] w-auto object-contain">
+</div>
 
-        <!-- Lingkaran kuning depan -->
-        <div class="absolute -bottom-20 right-14 w-48 h-48 bg-green-600 rounded-full z-20 flex items-center justify-center">
-
-            <!-- Circle kecil di tengah -->
-            <div class="w-40 h-40 bg-yellow-400 rounded-full"></div>
-
-        </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
