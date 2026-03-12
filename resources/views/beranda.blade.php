@@ -266,7 +266,7 @@ font-family:Poppins;
 
 
 <!-- PRESTASI -->
-<section class="py-20 bg-white overflow-hidden">
+<section class="bg-gray-100 py-24">
 
   <div class="max-w-6xl mx-auto px-4 flex gap-8 items-center">
 
@@ -429,77 +429,189 @@ font-family:Poppins;
 
 
 <!-- MENGAPA -->
-<section class="bg-gray-200 py-16 text-center">
+<section class="bg-gray-100 py-16">
 
-<div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4">
 
-<h2 class="text-3xl font-bold">
-Mengapa Memilih Kami?
-</h2>
+    <h2 class="text-3xl font-bold text-center text-green-600 mb-2">Mengapa Memilih Al Azhar?</h2>
 
-<div class="grid md:grid-cols-4 gap-6 mt-8">
+    <div class="relative mt-8">
 
-<div class="bg-white p-5 rounded-lg">
-<h4 class="font-bold">Fasilitas Lengkap</h4>
-<p>Sekolah dengan fasilitas modern.</p>
-</div>
+      <button onclick="slideMengapa(-1)"
+      class="absolute -top-12 z-10 bg-white border border-gray-200 text-green-700 rounded-full w-8 h-8 flex items-center justify-center shadow hover:bg-green-50 transition" style="right: 40px;">
+        &#8249;
+      </button>
 
-<div class="bg-white p-5 rounded-lg">
-<h4 class="font-bold">Guru Profesional</h4>
-<p>Didukung tenaga pengajar berpengalaman.</p>
-</div>
+      <button onclick="slideMengapa(1)"
+      class="absolute -top-12 z-10 bg-white border border-gray-200 text-green-700 rounded-full w-8 h-8 flex items-center justify-center shadow hover:bg-green-50 transition" style="right: 0;">
+        &#8250;
+      </button>
 
-<div class="bg-white p-5 rounded-lg">
-<h4 class="font-bold">Lingkungan Islami</h4>
-<p>Pendidikan berbasis nilai Islam.</p>
-</div>
+      <div class="overflow-hidden">
+        <div id="mengapaTrack" class="flex transition-transform duration-500 ease-in-out" style="gap: 24px;">
 
-<div class="bg-white p-5 rounded-lg">
-<h4 class="font-bold">Prestasi Siswa</h4>
-<p>Banyak prestasi akademik maupun non akademik.</p>
-</div>
+          <div style="min-width: calc((100% - 72px) / 4); max-width: calc((100% - 72px) / 4);" class="bg-white border border-gray-200 rounded-2xl p-6 text-center flex-shrink-0 hover:shadow-md transition-shadow">
+            <div class="flex justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Fasilitas Lengkap</h4>
+            <p class="text-gray-500 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+          </div>
 
-</div>
+          <div style="min-width: calc((100% - 72px) / 4); max-width: calc((100% - 72px) / 4);" class="bg-white border border-gray-200 rounded-2xl p-6 text-center flex-shrink-0 hover:shadow-md transition-shadow">
+            <div class="flex justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Guru Profesional</h4>
+            <p class="text-gray-500 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+          </div>
 
-</div>
+          <div style="min-width: calc((100% - 72px) / 4); max-width: calc((100% - 72px) / 4);" class="bg-white border border-gray-200 rounded-2xl p-6 text-center flex-shrink-0 hover:shadow-md transition-shadow">
+            <div class="flex justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Lingkungan Islami</h4>
+            <p class="text-gray-500 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+          </div>
+
+          <div style="min-width: calc((100% - 72px) / 4); max-width: calc((100% - 72px) / 4);" class="bg-white border border-gray-200 rounded-2xl p-6 text-center flex-shrink-0 hover:shadow-md transition-shadow">
+            <div class="flex justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Prestasi Siswa</h4>
+            <p class="text-gray-500 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+          </div>
+
+          <div style="min-width: calc((100% - 72px) / 4); max-width: calc((100% - 72px) / 4);" class="bg-white border border-gray-200 rounded-2xl p-6 text-center flex-shrink-0 hover:shadow-md transition-shadow">
+            <div class="flex justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-800 mb-2">Akreditasi A</h4>
+            <p class="text-gray-500 text-sm">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- EKSTRA -->
-<section class="py-16 text-center bg-green-700 text-white">
+<!-- EKSTRAKULIKULER -->
+<section class="bg-green-700 py-16">
 
-<div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4">
 
-<h2 class="text-3xl font-bold">
-Ekstrakurikuler Kami
-</h2>
+    <h2 class="text-3xl font-bold text-center text-white mb-2">Ekstrakulikuler Kami</h2>
 
-<div class="grid md:grid-cols-3 gap-6 mt-8">
+    <div class="relative mt-8">
 
-<div>
-<img src="{{ asset('basket.jpg') }}" 
-class="rounded-lg">
-<p class="mt-2">Basket</p>
-</div>
+      <button onclick="slideEkstra(-1)"
+      class="absolute -top-12 z-10 bg-white border border-gray-200 text-green-700 rounded-full w-8 h-8 flex items-center justify-center shadow hover:bg-green-50 transition" style="right: 40px;">
+        &#8249;
+      </button>
 
-<div>
-<img src="{{ asset('voli.jpg') }}" 
-class="rounded-lg">
-<p class="mt-2">Voli</p>
-</div>
+      <button onclick="slideEkstra(1)"
+      class="absolute -top-12 z-10 bg-white border border-gray-200 text-green-700 rounded-full w-8 h-8 flex items-center justify-center shadow hover:bg-green-50 transition" style="right: 0;">
+        &#8250;
+      </button>
 
-<div>
-<img src="{{ asset('badminton.jpg') }}" 
-class="rounded-lg">
-<p class="mt-2">Badminton</p>
-</div>
+      <div class="overflow-hidden rounded-2xl">
+        <div id="ekstraTrack" class="flex transition-transform duration-500 ease-in-out" style="gap: 24px;">
 
-</div>
+          <!-- CARD 1 -->
+          <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="flex-shrink-0 rounded-2xl overflow-hidden border-2 border-white">
+            <div class="relative h-52">
+              <img src="{{ asset('images/depan_sekolah.jpg') }}" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-white py-2 text-center">
+              <p class="font-bold text-green-700">Basket</p>
+            </div>
+          </div>
 
-</div>
+          <!-- CARD 2 -->
+          <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="flex-shrink-0 rounded-2xl overflow-hidden border-2 border-white">
+            <div class="relative h-52">
+              <img src="{{ asset('images/voli.jpg') }}" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-white py-2 text-center">
+              <p class="font-bold text-green-700">Voli</p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="flex-shrink-0 rounded-2xl overflow-hidden border-2 border-white">
+            <div class="relative h-52">
+              <img src="{{ asset('images/badminton.jpg') }}" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-white py-2 text-center">
+              <p class="font-bold text-green-700">Badminton</p>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="flex-shrink-0 rounded-2xl overflow-hidden border-2 border-white">
+            <div class="relative h-52">
+              <img src="{{ asset('images/pramuka.jpg') }}" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-white py-2 text-center">
+              <p class="font-bold text-green-700">Pramuka</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<script>
+  // Carousel Mengapa
+  const mengapaTrack = document.getElementById('mengapaTrack');
+  let mengapaCurrent = 0;
+  const mengapaVisible = 4;
+  const mengapaTotal = mengapaTrack.children.length;
+  const mengapaSlides = mengapaTotal - mengapaVisible + 1;
+
+  function slideMengapa(dir) {
+    mengapaCurrent += dir;
+    if (mengapaCurrent < 0) mengapaCurrent = mengapaSlides - 1;
+    if (mengapaCurrent >= mengapaSlides) mengapaCurrent = 0;
+    const cardWidth = mengapaTrack.children[0].offsetWidth + 24;
+    mengapaTrack.style.transform = `translateX(-${mengapaCurrent * cardWidth}px)`;
+  }
+
+  // Carousel Ekstra
+  const ekstraTrack = document.getElementById('ekstraTrack');
+  let ekstraCurrent = 0;
+  const ekstraVisible = 3;
+  const ekstraTotal = ekstraTrack.children.length;
+  const ekstraSlides = ekstraTotal - ekstraVisible + 1;
+
+  function slideEkstra(dir) {
+    ekstraCurrent += dir;
+    if (ekstraCurrent < 0) ekstraCurrent = ekstraSlides - 1;
+    if (ekstraCurrent >= ekstraSlides) ekstraCurrent = 0;
+    const cardWidth = ekstraTrack.children[0].offsetWidth + 24;
+    ekstraTrack.style.transform = `translateX(-${ekstraCurrent * cardWidth}px)`;
+  }
+</script>
 
 
 <!-- FOOTER -->
