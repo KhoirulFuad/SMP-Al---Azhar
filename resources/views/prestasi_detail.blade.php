@@ -1,40 +1,24 @@
-{{-- resources/views/prestasi.blade.php --}}
+{{-- resources/views/prestasi_detail.blade.php --}}
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prestasi - SMP Islam Al-Azhar 17</title>
+  <title>{{ $prestasi->judul }} - SMP Islam Al-Azhar 17</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; min-height: 100%; }
-    body {
-      font-family: Poppins, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    main { flex: 1; }
+    body { font-family: Poppins, sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
     .hero-banner { height: 220px; position: relative; overflow: hidden; }
     .hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
-    .prestasi-card { display: flex; gap: 24px; padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid #e5e7eb; }
-    .prestasi-card:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .prestasi-img { flex-shrink: 0; width: 176px; height: 176px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
-    .prestasi-img img { width: 100%; height: 100%; object-fit: cover; }
-    .prestasi-img-placeholder { width: 100%; height: 100%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 13px; }
-    .prestasi-content { display: flex; flex-direction: column; justify-content: center; }
-    .prestasi-title { color: #15803d; font-weight: 600; font-size: 15px; line-height: 1.4; text-decoration: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .prestasi-title:hover { text-decoration: underline; }
-    .prestasi-desc { font-size: 13px; color: #4b5563; margin-top: 8px; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-    .prestasi-date { font-size: 12px; color: #9ca3af; margin-top: 10px; }
-    .pagination-wrap { display: flex; justify-content: center; align-items: center; gap: 4px; margin-top: 32px; }
-    .page-btn { padding: 6px 12px; border-radius: 6px; font-size: 13px; background: #f3f4f6; color: #374151; text-decoration: none; transition: background 0.2s, color 0.2s; }
-    .page-btn:hover { background: #15803d; color: #fff; }
-    .page-btn.active { background: #15803d; color: #fff; font-weight: 600; }
-    .page-btn.disabled { color: #9ca3af; cursor: not-allowed; pointer-events: none; }
+    .content-wrap { flex: 1; max-width: 860px; margin: 0 auto; padding: 40px 16px; width: 100%; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: #15803d; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 24px; }
+    .back-link:hover { text-decoration: underline; }
+    .article-title { font-size: 24px; font-weight: 700; color: #111827; line-height: 1.4; margin-bottom: 8px; }
+    .article-date { font-size: 13px; color: #9ca3af; margin-bottom: 24px; }
+    .article-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .article-body { font-size: 15px; color: #374151; line-height: 1.8; }
   </style>
 </head>
 
@@ -73,67 +57,32 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <img src="{{ asset('images/depan_sekolah.jpg') }}" alt="Sekolah">
+    <div class="hero-overlay">
+      <h1 style="color:#fff; font-size:36px; font-weight:700; letter-spacing:6px; margin:0;">PRESTASI</h1>
+    </div>
+  </div>
 
-    <!-- HERO BANNER -->
-    <div class="hero-banner">
-      <img src="{{ asset('images/depan_sekolah.jpg') }}" alt="Sekolah">
-      <div class="hero-overlay">
-        <h1 style="color:#fff; font-size:36px; font-weight:700; letter-spacing:6px; margin:0;">PRESTASI</h1>
-      </div>
+  <!-- KONTEN DETAIL -->
+  <div class="content-wrap">
+
+    <a href="/prestasi" class="back-link">&#8592; Kembali ke Prestasi</a>
+
+    <h1 class="article-title">{{ $prestasi->judul }}</h1>
+
+    <p class="article-date">{{ \Carbon\Carbon::parse($prestasi->tanggal)->translatedFormat('d F Y') }}</p>
+
+    @if ($prestasi->gambar)
+      <img src="{{ asset('storage/' . $prestasi->gambar) }}" alt="{{ $prestasi->judul }}" class="article-img">
+    @endif
+
+    <div class="article-body">
+      {!! nl2br(e($prestasi->deskripsi)) !!}
     </div>
 
-    <!-- DAFTAR PRESTASI -->
-    <section style="max-width:860px; margin:0 auto; padding:40px 16px;">
-
-      @forelse ($prestasis as $item)
-      <div class="prestasi-card">
-        <div class="prestasi-img">
-          @if ($item->gambar)
-            <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->judul }}">
-          @else
-            <div class="prestasi-img-placeholder">No Image</div>
-          @endif
-        </div>
-        <div class="prestasi-content">
-          <a href="/prestasi/{{ $item->id }}" class="prestasi-title">{{ $item->judul }}</a>
-          <p class="prestasi-desc">{{ $item->deskripsi }}</p>
-          <p class="prestasi-date">-- {{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('d F Y') }}</p>
-        </div>
-      </div>
-      @empty
-        <p style="text-align:center; color:#6b7280; padding:60px 0;">Belum ada data prestasi.</p>
-      @endforelse
-
-      <!-- PAGINATION -->
-      @if ($prestasis->hasPages())
-      <div class="pagination-wrap">
-        @if ($prestasis->onFirstPage())
-          <span class="page-btn disabled">Sebelumnya</span>
-        @else
-          <a href="{{ $prestasis->previousPageUrl() }}" class="page-btn">Sebelumnya</a>
-        @endif
-
-        @foreach ($prestasis->links()->elements[0] as $page => $url)
-          @if (is_string($page))
-            <a href="{{ $url }}" class="page-btn {{ $prestasis->currentPage() == $page ? 'active' : '' }}">{{ $page }}</a>
-          @else
-            <span style="padding:0 4px; color:#9ca3af;">...</span>
-          @endif
-        @endforeach
-
-        @if ($prestasis->hasMorePages())
-          <a href="{{ $prestasis->nextPageUrl() }}" class="page-btn">Selanjutnya</a>
-        @else
-          <span class="page-btn disabled">Selanjutnya</span>
-        @endif
-      </div>
-      @endif
-
-    </section>
-
-  </main>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-green-900 text-white py-8">

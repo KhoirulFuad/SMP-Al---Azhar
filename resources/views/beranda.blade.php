@@ -502,7 +502,7 @@ class="rounded-lg">
 </section>
 
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <footer class="bg-green-900 text-white py-8">
 
     <div class="max-w-6xl mx-auto flex justify-between px-4">
