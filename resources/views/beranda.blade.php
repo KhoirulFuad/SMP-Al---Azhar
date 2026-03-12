@@ -502,25 +502,25 @@ class="rounded-lg">
 </section>
 
 
-<!-- FOOTER -->
-<footer class="bg-green-900 text-white py-8">
+    <!-- FOOTER -->
+    <footer class="bg-green-900 text-white py-8">
 
-<div class="max-w-6xl mx-auto flex justify-between px-4">
+    <div class="max-w-6xl mx-auto flex justify-between px-4">
 
-<div>
-<img src="{{ asset('images/logo.jpg') }}" class="w-10">
-<p>SMP Islam Al-Azhar 17 Pontianak</p>
-</div>
+    <div>
+    <img src="{{ asset('images/logo.jpg') }}" class="w-10">
+    <p>SMP Islam Al-Azhar 17 Pontianak</p>
+    </div>
 
-<div>
-<p class="font-bold">Kontak Kami</p>
-<p>+628xxxxxxx</p>
-<p>smpalazhar17@gmail.com</p>
-</div>
+    <div>
+    <p class="font-bold">Kontak Kami</p>
+    <p>+628xxxxxxx</p>
+    <p>smpalazhar17@gmail.com</p>
+    </div>
 
-</div>
+    </div>
 
-</footer>
+    </footer>
 
-</body>
-</html>
+    </body>
+    </html>
