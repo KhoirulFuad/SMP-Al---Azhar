@@ -164,7 +164,7 @@ font-family:Poppins;
 
         <!-- CARD 1 -->
         <div style="min-width: calc((100% - 48px) / 3); max-width: calc((100% - 48px) / 3);" class="bg-gray-200 rounded-xl overflow-hidden shadow-lg text-left flex-shrink-0">
-          <img src="{{ asset('images/agenda1.jpg') }}" class="w-full h-52 object-cover">
+          <img src="{{ asset('images/pkilat.jpg') }}" class="w-full h-52 object-cover">
           <div class="p-5">
             <p class="text-sm text-gray-600 mb-2">20 Juni 2026</p>
             <h3 class="text-xl font-bold mb-2 text-gray-800">Kegiatan Pesantren Kilat</h3>
@@ -279,7 +279,7 @@ font-family:Poppins;
 
       <!-- Card Prestasi 1 -->
       <div class="bg-white rounded-xl shadow-md p-4 flex gap-4 items-center mb-4 border border-gray-100">
-        <img src="{{ asset('images/prestasi1.jpg') }}" 
+        <img src="{{ asset('images/sekolah.jpg') }}" 
         class="w-[140px] h-[100px] rounded-lg object-cover flex-shrink-0">
         <p class="text-gray-600 text-sm leading-relaxed">
           Contrary to popular belief, Lorem Ipsum is not simply random text. 
@@ -341,70 +341,89 @@ font-family:Poppins;
 <!-- BERITA -->
 <section class="bg-white py-16">
 
-<div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4">
 
-<h2 class="text-3xl font-bold mb-8">
-Berita Terkini
-</h2>
+    <h2 class="text-3xl font-bold mb-8">Berita Terkini</h2>
 
-<div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-6">
 
-<div class="bg-gray-100 p-4 rounded-lg">
+      <!-- CARD 1 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita1.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
-<img src="{{ asset('berita1.jpg') }}" 
-class="rounded-lg mb-3">
+      <!-- CARD 2 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita2.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
-<h4 class="font-bold">
-Judul Berita
-</h4>
+      <!-- CARD 3 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita3.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
-<p>Deskripsi berita singkat...</p>
+      <!-- CARD 4 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita4.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
-<button class="bg-yellow-400 px-4 py-1 rounded mt-3">
-Baca Selengkapnya
-</button>
+      <!-- CARD 5 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita5.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
-</div>
+      <!-- CARD 6 -->
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ asset('images/berita6.jpg') }}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 mb-1">Tanggal Berita</p>
+          <h4 class="font-bold text-gray-800 mb-2">Judul Berita</h4>
+          <p class="text-gray-600 text-sm mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#" class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full hover:bg-green-700">Selengkapnya &rsaquo;</a>
+        </div>
+      </div>
 
+    </div>
 
-<div class="bg-gray-100 p-4 rounded-lg">
+    <!-- Tombol -->
+    <div class="flex justify-center mt-10">
+      <a href="" 
+      class="border-2 border-green-600 text-green-700 font-semibold px-10 py-2.5 rounded-lg hover:bg-green-600 hover:text-white flex items-center gap-2">
+        Lihat Selengkapnya &rsaquo;
+      </a>
+    </div>
 
-<img src="{{ asset('berita2.jpg') }}" 
-class="rounded-lg mb-3">
-
-<h4 class="font-bold">
-Judul Berita
-</h4>
-
-<p>Deskripsi berita singkat...</p>
-
-<button class="bg-yellow-400 px-4 py-1 rounded mt-3">
-Baca Selengkapnya
-</button>
-
-</div>
-
-
-<div class="bg-gray-100 p-4 rounded-lg">
-
-<img src="{{ asset('berita3.jpg') }}" 
-class="rounded-lg mb-3">
-
-<h4 class="font-bold">
-Judul Berita
-</h4>
-
-<p>Deskripsi berita singkat...</p>
-
-<button class="bg-yellow-400 px-4 py-1 rounded mt-3">
-Baca Selengkapnya
-</button>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
