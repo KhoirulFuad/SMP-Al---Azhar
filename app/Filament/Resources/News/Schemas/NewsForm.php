@@ -3,7 +3,9 @@
 namespace App\Filament\Resources\News\Schemas;
 
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 
@@ -14,15 +16,35 @@ class NewsForm
         return $schema
             ->components([
                 TextInput::make('title')
-                    ->required(),
+                    ->placeholder('title news')
+                    ->required()
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(
+                        fn($state, $set) =>
+                        $set('slug', \Illuminate\Support\Str::slug($state))
+                    ),
                 TextInput::make('slug')
+                    ->placeholder('filled automatically')
+                    ->readOnly()
                     ->required(),
-                TextInput::make('photo'),
+                FileUpload::make('image')
+                    ->image()
+                    ->disk('public')
+                    ->directory('news')
+                    ->visibility('public')
+                    ->maxSize(2048)
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->imagePreviewHeight('200')
+                    ->previewable()
+                    ->required(),
                 DatePicker::make('news_date')
                     ->required(),
-                Textarea::make('content')
+                RichEditor::make('content')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->extraAttributes(
+                        ['style' => 'min-height: 300px;'],
+                    ),
             ]);
     }
 }

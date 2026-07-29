@@ -18,7 +18,7 @@ class SchoolAgendaResource extends Resource
 {
     protected static ?string $model = SchoolAgenda::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;
 
     public static function form(Schema $schema): Schema
     {

@@ -8,7 +8,7 @@ class PrincipalMessage extends Model
 {
     protected $fillable = [
         'name',
-        'photo',
+        'image',
         'message',
         'total_students',
         'total_staff'

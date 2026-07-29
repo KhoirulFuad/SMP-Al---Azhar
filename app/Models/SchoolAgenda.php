@@ -9,7 +9,7 @@ class SchoolAgenda extends Model
     protected $fillable = [
         'title',
         'slug',
-        'photo',
+        'image',
         'agenda_date',
         'content'
     ];

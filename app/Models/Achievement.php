@@ -9,7 +9,7 @@ class Achievement extends Model
     protected $fillable = [
         'title',
         'slug',
-        'photo',
+        'image',
         'achievement_date',
         'content'
     ];

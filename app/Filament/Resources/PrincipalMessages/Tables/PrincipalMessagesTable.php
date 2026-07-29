@@ -5,6 +5,8 @@ namespace App\Filament\Resources\PrincipalMessages\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -16,18 +18,13 @@ class PrincipalMessagesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('photo')
-                    ->searchable(),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 TextColumn::make('total_students')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('total_staff')
                     ->numeric()
-                    ->sortable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('news_date')
-                    ->date()
                     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
@@ -43,6 +40,7 @@ class PrincipalMessagesTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

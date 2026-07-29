@@ -1,227 +1,293 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMP Islam Al-Azhar 17</title>
+{{-- resources/views/profil.blade.php --}}
+@extends('layouts.app')
 
-<script src="https://cdn.tailwindcss.com"></script>
+@section('title', 'Profil Kami - SMP Islam Al-Azhar 17')
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+@push('styles')
 <style>
-body{
-font-family:Poppins;
-}
+  .deco {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes floatUp {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes floatDown {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(14px);
+    }
+  }
+
+  @keyframes pulseSoft {
+
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+
+    50% {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+  }
+
+  @keyframes drift {
+
+    0%,
+    100% {
+      transform: translateX(0px) rotate(0deg);
+    }
+
+    33% {
+      transform: translateX(8px) rotate(5deg);
+    }
+
+    66% {
+      transform: translateX(-6px) rotate(-4deg);
+    }
+  }
+
+  .richtext ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .richtext ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .richtext li {
+    margin-bottom: 0.4rem;
+  }
+
+  .richtext p {
+    margin-bottom: 0.75rem;
+  }
+
+  .richtext h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .richtext h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .richtext strong {
+    font-weight: 700;
+  }
+
+  .richtext a {
+    color: #15803d;
+    text-decoration: underline;
+  }
 </style>
+@endpush
 
-</head>
+@section('content')
 
-<body class="bg-white-700">
+<section class="relative overflow-hidden" style="background-color:#F9F6F0; min-height:100vh;">
 
-<!-- NAVBAR -->
-<header class="bg-green-700 py-3">
-<div class="max-w-6xl mx-auto flex items-center justify-between px-4">
+  {{-- Dekorasi kiri --}}
+  <div class="deco" style="top:-40px;left:-40px;animation:pulseSoft 10s ease-in-out infinite;"><svg width="220" height="220">
+      <circle cx="110" cy="110" r="110" fill="#16a34a" opacity="0.07" />
+    </svg></div>
+  <div class="deco" style="top:20px;left:60px;animation:floatUp 7s ease-in-out infinite 0.5s;"><svg width="22" height="22">
+      <rect width="22" height="22" rx="4" fill="#16a34a" opacity="0.15" transform="rotate(25 11 11)" />
+    </svg></div>
+  <div class="deco" style="top:100px;left:20px;animation:floatDown 8s ease-in-out infinite 1s;"><svg width="14" height="14">
+      <circle cx="7" cy="7" r="7" fill="#ca8a04" opacity="0.2" />
+    </svg></div>
+  <div class="deco" style="top:30%;left:2%;animation:drift 11s ease-in-out infinite;"><svg width="36" height="36">
+      <polygon points="18,0 36,36 0,36" fill="#16a34a" opacity="0.1" />
+    </svg></div>
+  <div class="deco" style="top:55%;left:3%;animation:floatUp 9s ease-in-out infinite 1.5s;"><svg width="18" height="18">
+      <rect width="18" height="18" rx="3" fill="#ca8a04" opacity="0.15" transform="rotate(40 9 9)" />
+    </svg></div>
+  <div class="deco" style="bottom:120px;left:5%;animation:floatDown 10s ease-in-out infinite 2s;"><svg width="28" height="28">
+      <polygon points="14,0 28,28 0,28" fill="#16a34a" opacity="0.1" />
+    </svg></div>
+  <div class="deco" style="bottom:40px;left:2%;animation:floatUp 8s ease-in-out infinite 1s;"><svg width="16" height="16">
+      <circle cx="8" cy="8" r="8" fill="#ca8a04" opacity="0.15" />
+    </svg></div>
 
-  <!-- Logo -->
-  <div class="flex items-center gap-2 flex-shrink-0">
-    <img src="{{ asset('images/logo.jpg') }}" class="w-10 h-10 rounded-full object-cover">
-    <img src="{{ asset('images/tulisan al azhar.png') }}" class="h-8">
+  {{-- Dekorasi kanan --}}
+  <div class="deco" style="top:-20px;right:-20px;animation:pulseSoft 11s ease-in-out infinite 1s;"><svg width="200" height="200">
+      <circle cx="100" cy="100" r="100" fill="#ca8a04" opacity="0.06" />
+    </svg></div>
+  <div class="deco" style="top:30px;right:50px;animation:floatDown 9s ease-in-out infinite 0.5s;"><svg width="32" height="32">
+      <rect width="32" height="32" rx="6" fill="#ca8a04" opacity="0.12" transform="rotate(20 16 16)" />
+    </svg></div>
+  <div class="deco" style="top:120px;right:15px;animation:floatUp 6s ease-in-out infinite 1.5s;"><svg width="16" height="16">
+      <circle cx="8" cy="8" r="8" fill="#16a34a" opacity="0.18" />
+    </svg></div>
+  <div class="deco" style="top:35%;right:3%;animation:drift 13s ease-in-out infinite 1s;"><svg width="28" height="28">
+      <polygon points="14,0 28,28 0,28" fill="#ca8a04" opacity="0.12" />
+    </svg></div>
+  <div class="deco" style="top:58%;right:2%;animation:floatDown 8s ease-in-out infinite 0.5s;"><svg width="20" height="20">
+      <rect width="20" height="20" rx="4" fill="#16a34a" opacity="0.13" transform="rotate(30 10 10)" />
+    </svg></div>
+  <div class="deco" style="bottom:80px;right:5%;animation:floatUp 9s ease-in-out infinite 2s;"><svg width="24" height="24">
+      <circle cx="12" cy="12" r="12" fill="#ca8a04" opacity="0.1" />
+    </svg></div>
+  <div class="deco" style="bottom:30px;right:3%;animation:drift 12s ease-in-out infinite 0.5s;"><svg width="30" height="30">
+      <polygon points="15,0 30,30 0,30" fill="#16a34a" opacity="0.09" />
+    </svg></div>
+
+  {{-- Grid titik kiri bawah --}}
+  <div class="deco" style="bottom:100px;left:2%;">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:7px;">
+      @for ($i = 0; $i < 20; $i++)
+        <div style="width:5px;height:5px;border-radius:50%;background:#16a34a;opacity:0.2;">
+    </div>
+    @endfor
+  </div>
   </div>
 
-  <!-- Nav Menu -->
-  <nav class="flex-1 flex justify-center">
-    <ul class="flex gap-8 text-white text-sm font-semibold">
-      <li class="cursor-pointer hover:text-yellow-300 transition-colors">Beranda</li>
-      <li class="cursor-pointer hover:text-yellow-300 transition-colors">Profil Kami</li>
-      <li class="cursor-pointer hover:text-yellow-300 transition-colors">Prestasi</li>
-      <li class="cursor-pointer hover:text-yellow-300 transition-colors">Berita</li>
-      <li class="cursor-pointer hover:text-yellow-300 transition-colors">PMB</li>
-    </ul>
-  </nav>
-
-  <!-- Sosial Media -->
-  <div class="flex items-center gap-4 flex-shrink-0">
-
-    <!-- WhatsApp -->
-    <a href="#" class="text-white hover:text-yellow-300 transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-    </a>
-
-    <!-- Facebook -->
-    <a href="#" class="text-white hover:text-yellow-300 transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-    </a>
-
-    <!-- Instagram -->
-    <a href="#" class="text-white hover:text-yellow-300 transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-      </svg>
-    </a>
-
+  {{-- Grid titik kanan atas --}}
+  <div class="deco" style="top:30px;right:3%;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+      @for ($i = 0; $i < 12; $i++)
+        <div style="width:5px;height:5px;border-radius:50%;background:#ca8a04;opacity:0.2;">
+    </div>
+    @endfor
+  </div>
   </div>
 
-</div>
-</header>
+  {{-- Grid titik kiri tengah --}}
+  <div class="deco" style="top:48%;left:1%;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+      @for ($i = 0; $i < 9; $i++)
+        <div style="width:4px;height:4px;border-radius:50%;background:#ca8a04;opacity:0.18;">
+    </div>
+    @endfor
+  </div>
+  </div>
 
+  {{-- Grid titik kanan tengah --}}
+  <div class="deco" style="top:70%;right:1%;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+      @for ($i = 0; $i < 12; $i++)
+        <div style="width:4px;height:4px;border-radius:50%;background:#16a34a;opacity:0.18;">
+    </div>
+    @endfor
+  </div>
+  </div>
 
+  {{-- Bintang dekoratif --}}
+  <div class="deco" style="top:25px;left:38%;font-size:16px;opacity:0.25;color:#16a34a;animation:floatUp 5s ease-in-out infinite;">✦</div>
+  <div class="deco" style="top:52%;left:6%;font-size:12px;opacity:0.2;color:#ca8a04;animation:floatDown 7s ease-in-out infinite 0.5s;">★</div>
+  <div class="deco" style="bottom:160px;right:8%;font-size:12px;opacity:0.3;color:#ca8a04;animation:floatDown 6s ease-in-out infinite 1s;">★</div>
+  <div class="deco" style="top:70px;right:28%;font-size:10px;opacity:0.2;color:#16a34a;animation:floatUp 7s ease-in-out infinite 0.5s;">✦</div>
+  <div class="deco" style="bottom:240px;left:8%;font-size:14px;opacity:0.2;color:#16a34a;animation:floatUp 6s ease-in-out infinite 1s;">✦</div>
+  <div class="deco" style="top:42%;right:6%;font-size:10px;opacity:0.2;color:#ca8a04;animation:floatDown 8s ease-in-out infinite 1.5s;">★</div>
 
-<!-- CONTAINER -->
+  {{-- Konten utama --}}
+  <div class="max-w-5xl mx-auto py-10 px-4 relative" style="z-index:10;">
 
-<section class="max-w-6xl mx-auto py-12 px-4">
+    {{-- Tombol Kembali --}}
+    <div class="mb-6" data-aos="fade-right">
+      <a href="{{ route('beranda') }}"
+        class="inline-flex items-center gap-2 border border-green-600 text-green-700 font-semibold px-5 py-2 rounded-lg hover:bg-green-600 hover:text-white transition-colors text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+        Kembali
+      </a>
+    </div>
 
+    {{-- ===== SEJARAH SINGKAT ===== --}}
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8" data-aos="fade-up">
+      <div class="relative">
+        <img src="{{ asset('storage/beranda/gedungsmp2.png') }}"
+          class="w-full h-[150px] object-cover object-center"
+          alt="Sejarah Singkat">
+        <div class="absolute inset-0 flex items-center justify-center" style="background-color: rgba(6,78,59,0.65);">
+          <h2 class="text-3xl font-bold text-white tracking-widest uppercase">Sejarah Singkat</h2>
+        </div>
+      </div>
+      <div class="p-6 text-gray-700 text-sm leading-relaxed richtext">
+        @if ($profil && $profil->history)
+        {!! $profil->history !!}
+        @else
+        <p class="text-gray-400 text-center py-4">Belum ada data sejarah.</p>
+        @endif
+      </div>
+    </div>
 
-<!-- SEJARAH -->
+    {{-- ===== VISI & MISI ===== --}}
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative">
+        <img src="{{ asset('storage/beranda/gedungsmp2.png') }}"
+          class="w-full h-[150px] object-cover object-center"
+          alt="Visi & Misi">
+        <div class="absolute inset-0 flex items-center justify-center" style="background-color: rgba(6,78,59,0.65);">
+          <h2 class="text-3xl font-bold text-white tracking-widest uppercase">Visi &amp; Misi</h2>
+        </div>
+      </div>
+      <div class="p-6 text-gray-700 text-sm leading-relaxed richtext">
+        @if ($profil && $profil->vision)
+        <p class="font-bold mb-1">VISI :</p>
+        <div class="mb-5">{!! $profil->vision !!}</div>
+        @endif
 
-<div class="bg-white rounded-xl shadow-md overflow-hidden mb-10">
+        @if ($profil && $profil->mission)
+        <p class="font-bold mb-2">MISI :</p>
+        <div>{!! $profil->mission !!}</div>
+        @endif
 
-<div class="relative">
+        @if (!$profil || (!$profil->vision && !$profil->mission))
+        <p class="text-gray-400 text-center py-4">Belum ada data visi & misi.</p>
+        @endif
+      </div>
+    </div>
 
-<img src="{{ asset('images/pkilat.jpg') }}"
-class="w-full h-[150px] object-cover">
+    {{-- ===== STRUKTUR ORGANISASI ===== --}}
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative">
+        <img src="{{ asset('storage/beranda/gedungsmp2.png') }}"
+          class="w-full h-[150px] object-cover object-center"
+          alt="Struktur Organisasi">
+        <div class="absolute inset-0 flex items-center justify-center" style="background-color: rgba(6,78,59,0.65);">
+          <h2 class="text-3xl font-bold text-white">Struktur Organisasi</h2>
+        </div>
+      </div>
+      <div class="p-6">
+        @if ($profil && $profil->image)
+        <img src="{{ asset('storage/' . $profil->image) }}"
+          class="w-full rounded-lg"
+          alt="Struktur Organisasi SMP Islam Al-Azhar 17">
+        @else
+        <p class="text-gray-400 text-center py-4">Belum ada gambar struktur organisasi.</p>
+        @endif
+      </div>
+    </div>
 
-<div class="absolute inset-0 bg-green-900/60 flex items-center justify-center">
-
-<h2 class="text-3xl font-bold text-white">
-SEJARAH SINGKAT
-</h2>
-
-</div>
-
-</div>
-
-<div class="p-6 text-gray-700 leading-relaxed text-sm">
-
-<p class="mb-4">
-<b>SMP Islam Al Azhar 17 Pontianak</b> adalah sekolah yang berada di bawah naungan
-Yayasan Kejayaan Islam Khatulistiwa yang bekerja sama dengan
-Yayasan Pesantren Islam Al Azhar Jakarta.
-</p>
-
-<p class="mb-4">
-Sekolah ini berdiri untuk memberikan pendidikan yang berkualitas dengan
-mengintegrasikan nilai-nilai Islam dalam proses pembelajaran.
-</p>
-
-<ol class="list-decimal ml-6 space-y-2">
-
-<li>
-Surat Keputusan Dinas Pendidikan dan Kebudayaan Kota Pontianak Nomor
-133/Kep/2014 tentang penetapan persetujuan pendirian dan izin operasional sekolah.
-</li>
-
-<li>
-Surat Keputusan Pengurus Yayasan Pesantren Islam Al Azhar Nomor
-86/YKep/YPIA-P/1435/2014 tentang Pendirian SMA Islam Al Azhar 10 Pontianak.
-</li>
-
-<li>
-Surat Keputusan Dinas Pendidikan dan Kebudayaan Kota Pontianak Nomor
-214/Kep/2014 tentang izin operasional sekolah.
-</li>
-
-</ol>
-
-</div>
-
-</div>
-
-
-
-<!-- VISI MISI -->
-
-<div class="bg-white rounded-xl shadow-md overflow-hidden mb-10">
-
-<div class="relative">
-
-<img src="{{ asset('images/pkilat.jpg') }}"
-class="w-full h-[150px] object-cover">
-
-<div class="absolute inset-0 bg-green-900/60 flex items-center justify-center">
-
-<h2 class="text-3xl font-bold text-white">
-VISI & MISI
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="p-6 text-gray-700 text-sm">
-
-<h3 class="font-bold mb-2">VISI :</h3>
-
-<p class="mb-4">
-Terwujudnya generasi muslim yang beriman, berakhlak mulia,
-cerdas, berprestasi dan berwawasan global.
-</p>
-
-
-<h3 class="font-bold mb-2">MISI :</h3>
-
-<ol class="list-decimal ml-6 space-y-2">
-
-<li>Menciptakan iklim sekolah yang bernuansa Islami.</li>
-
-<li>Mengembangkan pembelajaran aktif dan inovatif.</li>
-
-<li>Membentuk karakter siswa yang disiplin dan bertanggung jawab.</li>
-
-<li>Mengembangkan potensi akademik dan non akademik siswa.</li>
-
-<li>Meningkatkan prestasi siswa di tingkat kota, provinsi, dan nasional.</li>
-
-<li>Mempersiapkan siswa menghadapi tantangan global.</li>
-
-</ol>
-
-</div>
-
-</div>
-
-
-
-<!-- STRUKTUR ORGANISASI -->
-
-<div class="bg-white rounded-xl shadow-md overflow-hidden">
-
-<div class="p-6">
-
-<img src="{{ asset('images/struktur organisasi.png') }}"
-class="w-full rounded-lg">
-
-</div>
-
-</div>
-
-
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-green-900 text-white py-8">
-
-<div class="max-w-6xl mx-auto flex justify-between px-4">
-
-<div>
-<img src="{{ asset('images/logo.jpg') }}" class="w-10">
-<p>SMP Islam Al-Azhar 17 Pontianak</p>
-</div>
-
-<div>
-<p class="font-bold">Kontak Kami</p>
-<p>+628xxxxxxx</p>
-<p>smpalazhar17@gmail.com</p>
-</div>
-
-</div>
-
-</footer>
-
-</body>
-</html>
+@endsection

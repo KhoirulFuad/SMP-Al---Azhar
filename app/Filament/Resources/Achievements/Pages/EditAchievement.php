@@ -18,7 +18,6 @@ class EditAchievement extends EditRecord
     }
 
     // getRedirectUrl 
-
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

@@ -5,10 +5,10 @@ namespace App\Filament\Resources\Achievements\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Filament\Tables\Columns\ImageColumn;
-
+use Filament\Actions\DeleteAction;
 
 class AchievementsTable
 {
@@ -18,16 +18,13 @@ class AchievementsTable
             ->columns([
                 TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                ImageColumn::make('photo')
-                    ->disk('public')
-                    ->height(60),
+                // TextColumn::make('slug')
+                //     ->searchable(),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 TextColumn::make('achievement_date')
                     ->date()
                     ->sortable(),
-                TextColumn::make('content')
-                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -42,6 +39,7 @@ class AchievementsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

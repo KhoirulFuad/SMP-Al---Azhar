@@ -18,7 +18,13 @@ class PrincipalMessageResource extends Resource
 {
     protected static ?string $model = PrincipalMessage::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleOvalLeftEllipsis;
+
+    // 👇 Tambahkan ini
+    public static function canCreate(): bool
+    {
+        return PrincipalMessage::count() === 0;
+    }
 
     public static function form(Schema $schema): Schema
     {
