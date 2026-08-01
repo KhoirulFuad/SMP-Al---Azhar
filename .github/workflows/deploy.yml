@@ -29,17 +29,18 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy files via rsync over SSH
-        uses: burnett01/rsync-deployments@7.0.1
+      - name: Deploy files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          switches: -avzr --delete --exclude=".env" --exclude=".git*" --exclude="storage/app/public"
-          path: ./
-          remote_path: ~/public_html/
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_port: ${{ secrets.SSH_PORT }}
-          remote_user: ${{ secrets.SSH_USERNAME }}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          remote_key_pass: ${{ secrets.SSH_PASSPHRASE }}
+          username: ${{ secrets.SSH_USERNAME }}
+          server: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SSH_PASSPHRASE }}
+          local_path: './*'
+          remote_path: '/home/smpisl10/public_html'
+          sftp_only: true
+          delete_remote_files: false
 
       - name: Run artisan commands on server
         uses: appleboy/ssh-action@v1.0.3
