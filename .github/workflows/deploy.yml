@@ -33,7 +33,7 @@ jobs:
         run: rm -rf node_modules
 
       - name: Create deployment archive
-        run: tar -czf deploy.tar.gz --exclude=".git" --exclude="deploy.tar.gz" .
+        run: tar -czf /tmp/deploy.tar.gz --exclude=".git" .
 
       - name: Upload archive via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -42,7 +42,7 @@ jobs:
           server: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './deploy.tar.gz'
+          local_path: '/tmp/deploy.tar.gz'
           remote_path: '/home/smpisl10/public_html'
           sftp_only: true
           delete_remote_files: false
