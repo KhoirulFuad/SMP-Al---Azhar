@@ -29,6 +29,9 @@ jobs:
           npm install
           npm run build
 
+      - name: Remove node_modules before deploy
+        run: rm -rf node_modules
+
       - name: Deploy files via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
