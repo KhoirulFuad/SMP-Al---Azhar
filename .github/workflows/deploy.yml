@@ -33,7 +33,7 @@ jobs:
         run: rm -rf node_modules
 
       - name: Create deployment archive
-        run: tar -czf deploy.tar.gz --exclude=".git" .
+        run: tar -czf deploy.tar.gz --exclude=".git" --exclude="deploy.tar.gz" .
 
       - name: Upload archive via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
